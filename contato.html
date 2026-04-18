@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- Declaração do HTML5 -->
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Permite caracteres especiais -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsividade -->
+
+    <title>Contato e Cadastro</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Importa o CSS -->
+</head>
+
+<body>
+
+    <!-- ======================================================
+         CABEÇALHO PADRÃO DO SITE
+    ======================================================= -->
+    <header>
+        <h1>Empreendedoras Alimentícias</h1>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="empreendedoras.html">Empreendedoras</a>
+            <a href="sustentabilidade.html">Sustentabilidade</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <!-- ======================================================
+         BANNER DA PÁGINA
+    ======================================================= -->
+    <section class="banner">
+        <h2>Contato e Cadastro</h2>
+        <p>Quer divulgar seu negócio? Preencha o formulário abaixo.</p>
+    </section>
+
+    <!-- ======================================================
+         CONTEÚDO PRINCIPAL
+         Formulário de cadastro demonstrativo
+    ======================================================= -->
+    <main class="container">
+
+        <h2>Formulário de Cadastro de Empreendedora</h2>
+
+        <p>
+            Preencha os dados abaixo para solicitar a inclusão do seu negócio no site.
+            (Este formulário é demonstrativo para fins acadêmicos.)
+        </p>
+
+        <!-- Formulário controlado pelo JavaScript -->
+        <form id="formCadastro">
+
+            <!-- Campo Nome -->
+            <label for="nome"><strong>Nome da Empreendedora:</strong></label>
+            <input type="text" id="nome" required placeholder="Ex: Maria da Silva">
+
+            <br><br>
+
+            <!-- Campo Produto -->
+            <label for="produto"><strong>Produto Principal:</strong></label>
+            <input type="text" id="produto" required placeholder="Ex: Bolos caseiros">
+
+            <br><br>
+
+            <!-- Campo Cidade -->
+            <label for="cidade"><strong>Cidade:</strong></label>
+            <select id="cidade" required>
+                <option value="">Selecione</option>
+                <option value="Palhoça">Palhoça</option>
+                <option value="São José">São José</option>
+            </select>
+
+            <br><br>
+
+            <!-- Campo WhatsApp -->
+            <label for="telefone"><strong>WhatsApp:</strong></label>
+            <input type="text" id="telefone" required placeholder="Ex: (48) 99999-9999">
+
+            <br><br>
+
+            <!-- Campo Descrição -->
+            <label for="descricao"><strong>Descrição do Negócio:</strong></label>
+            <textarea id="descricao" rows="4"
+                placeholder="Ex: Trabalho com doces e salgados para festas..."></textarea>
+
+            <br><br>
+
+            <!-- Botão de envio -->
+            <button type="submit" class="button">
+                Enviar Cadastro
+            </button>
+
+        </form>
+
+        <!-- Mensagem de sucesso (aparece após enviar o formulário) -->
+        <p id="mensagemSucesso"></p>
+
+    </main>
+
+    <!-- ======================================================
+         RODAPÉ
+    ======================================================= -->
+    <footer>
+        <p>Projeto Extensionista - UNINTER | ADS</p>
+    </footer>
+
+    <!-- Botão voltar ao topo -->
+    <button id="btnTopo">↑</button>
+
+    <!-- Importa JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
