@@ -1,24 +1,16 @@
 /* ======================================================
-   ARQUIVO: style.css
-   PROJETO: Empreenda com Sabor
-   OBJETIVO: Estilo completo do site (layout, cores e responsividade)
-   TEMA: Feminino moderno (Lilás + Menta)
+   STYLE.CSS - Empreenda com Sabor
+   Tema: Lilás + Menta (moderno feminino)
 ====================================================== */
 
-
-/* ======================================================
-   1) RESET GLOBAL
-====================================================== */
+/* ===================== RESET ===================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-/* ======================================================
-   2) ESTILO GLOBAL DO SITE
-====================================================== */
+/* ===================== GERAL ===================== */
 body {
     font-family: Arial, sans-serif;
     background-color: #FAFAFA;
@@ -26,27 +18,17 @@ body {
     line-height: 1.6;
 }
 
-
-/* ======================================================
-   3) CONTAINER PADRÃO (ÁREA CENTRAL DO SITE)
-====================================================== */
 .container {
     width: 94%;
     max-width: 1300px;
     margin: 30px auto;
-
     background: white;
     padding: 35px;
-
     border-radius: 20px;
-
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-
-/* ======================================================
-   4) TIPOGRAFIA PADRÃO
-====================================================== */
+/* ===================== TIPOGRAFIA ===================== */
 h2 {
     margin-bottom: 15px;
     color: #7C5CBF;
@@ -62,91 +44,61 @@ ul {
     margin-bottom: 15px;
 }
 
-
-/* ======================================================
-   5) HEADER (CABEÇALHO) IGUAL AO PROTÓTIPO
-====================================================== */
+/* ===================== HEADER ===================== */
 .top-header {
     background: linear-gradient(to right, #7C5CBF, #A7D7C5);
     padding: 40px 20px;
-
     text-align: center;
-
     position: relative;
     overflow: hidden;
-
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.12);
 }
 
-/* ------------------------------------------------------
-   BOLAS DECORATIVAS NO FUNDO (IGUAL A IMAGEM)
------------------------------------------------------- */
-.top-header::before {
-    content: "";
-    position: absolute;
-
-    width: 220px;
-    height: 220px;
-
-    top: -70px;
-    left: -70px;
-
-    background: rgba(255, 255, 255, 0.20);
-    border-radius: 50%;
-}
-
+/* Bolas decorativas */
+.top-header::before,
 .top-header::after {
     content: "";
     position: absolute;
-
     width: 220px;
     height: 220px;
-
-    bottom: -70px;
-    right: -70px;
-
     background: rgba(255, 255, 255, 0.20);
     border-radius: 50%;
 }
 
-/* ------------------------------------------------------
-   Área do logo/título do site
------------------------------------------------------- */
-.logo-area h1 {
+.top-header::before {
+    top: -70px;
+    left: -70px;
+}
+
+.top-header::after {
+    bottom: -70px;
+    right: -70px;
+}
+
+.header-content {
     position: relative;
     z-index: 2;
+}
 
+.logo-area h1 {
     color: white;
     font-size: 54px;
-    /* AQUI está o tamanho grande igual ao protótipo */
     font-weight: bold;
-
     margin-bottom: 12px;
     letter-spacing: 1px;
-
     text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-/* Subtítulo */
 .logo-area p {
-    position: relative;
-    z-index: 2;
-
     font-size: 15px;
     color: rgba(255, 255, 255, 0.92);
-
     max-width: 780px;
     margin: auto;
     margin-bottom: 22px;
 }
 
-/* ------------------------------------------------------
-   MENU
------------------------------------------------------- */
+/* ===================== MENU ===================== */
 .menu {
-    position: relative;
-    z-index: 2;
-
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -156,17 +108,12 @@ ul {
 .menu a {
     background: rgba(255, 255, 255, 0.95);
     color: #6b4bbd;
-
     text-decoration: none;
     font-weight: bold;
-
     padding: 12px 22px;
     border-radius: 30px;
-
     font-size: 15px;
-
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
-
     transition: 0.3s;
 }
 
@@ -175,67 +122,46 @@ ul {
     transform: translateY(-2px);
 }
 
-
-/* ======================================================
-   6) BOTÕES PADRÃO DO SITE
-====================================================== */
-.btn,
-.button {
+/* ===================== BOTÕES ===================== */
+.btn {
     display: inline-block;
-
     background-color: #7C5CBF;
     color: white;
-
     padding: 12px 18px;
     border-radius: 12px;
-
     text-decoration: none;
     font-weight: bold;
-
     border: none;
     cursor: pointer;
-
     transition: 0.3s;
 }
 
-.btn:hover,
-.button:hover {
+.btn:hover {
     background-color: #5f44a0;
     transform: scale(1.03);
 }
 
-/* Botão secundário (outline) */
-.btn-outline,
-.button-outline {
+/* botão transparente (hero/banner) */
+.btn-outline {
     display: inline-block;
-
     padding: 12px 18px;
     border-radius: 12px;
-
     background: rgba(255, 255, 255, 0.18);
     border: 1px solid rgba(255, 255, 255, 0.35);
-
     color: white;
     font-weight: bold;
-
     text-decoration: none;
     cursor: pointer;
-
     transition: 0.3s;
     backdrop-filter: blur(6px);
 }
 
-.btn-outline:hover,
-.button-outline:hover {
+.btn-outline:hover {
     background: rgba(255, 255, 255, 0.28);
     transform: scale(1.03);
 }
 
-
-/* ======================================================
-   7) HERO PRINCIPAL (EMPODERAMENTO FEMININO)
-   Mantém sombra atrás (efeito de profundidade)
-====================================================== */
+/* ===================== HERO INDEX ===================== */
 .hero-index {
     background: linear-gradient(to right, #7C5CBF, #A7D7C5);
     border-radius: 25px;
@@ -247,23 +173,12 @@ ul {
     gap: 35px;
 
     color: white;
-
     margin-bottom: 45px;
 
-    /* sombra principal */
     box-shadow: 0px 18px 40px rgba(0, 0, 0, 0.18);
-
-    /* borda clara interna */
     border: 6px solid rgba(255, 255, 255, 0.55);
 }
 
-/* Sombra extra atrás (igual a imagem) */
-.hero-index::before {
-    content: "";
-    position: absolute;
-}
-
-/* Texto do hero */
 .hero-index-text {
     flex: 1;
 }
@@ -272,7 +187,6 @@ ul {
     font-size: 52px;
     margin-bottom: 18px;
     color: white;
-
     line-height: 1.15;
     text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.25);
 }
@@ -281,31 +195,26 @@ ul {
     font-size: 16px;
     line-height: 1.7;
     margin-bottom: 28px;
-
     color: rgba(255, 255, 255, 0.95);
 }
 
-/* Botões dentro do hero */
 .hero-buttons {
     display: flex;
     gap: 14px;
     flex-wrap: wrap;
 }
 
-/* Ajuste para os dois botões ficarem iguais */
-.hero-buttons .btn,
-.hero-buttons .button {
+/* botões do hero iguais */
+.hero-buttons .btn {
     background: rgba(255, 255, 255, 0.18);
     border: 1px solid rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(6px);
 }
 
-.hero-buttons .btn:hover,
-.hero-buttons .button:hover {
+.hero-buttons .btn:hover {
     background: rgba(255, 255, 255, 0.30);
 }
 
-/* Imagem do hero */
 .hero-index-image {
     flex: 1;
     display: flex;
@@ -315,31 +224,34 @@ ul {
 .hero-index-image img {
     width: 100%;
     max-width: 420px;
-
     border-radius: 18px;
     object-fit: cover;
-
     background: white;
     padding: 10px;
-
     box-shadow: 0px 10px 26px rgba(0, 0, 0, 0.25);
 }
 
+/* ===================== SEÇÕES INTERNAS ===================== */
+.hero {
+    margin-top: 30px;
+}
 
-/* ======================================================
-   8) BANNER PADRÃO (PÁGINAS INTERNAS)
-====================================================== */
+.hero-content h3 {
+    font-size: 24px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    color: #7C5CBF;
+}
+
+/* ===================== BANNER ===================== */
 .banner {
     background: linear-gradient(to right, #7C5CBF, #A7D7C5);
     padding: 40px 30px;
     border-radius: 22px;
-
     text-align: center;
     color: white;
-
     width: 100%;
     box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.12);
-
     margin-bottom: 35px;
 }
 
@@ -358,7 +270,6 @@ ul {
 
 .banner-highlights {
     margin-top: 25px;
-
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -368,20 +279,14 @@ ul {
 .banner-highlights span {
     background: rgba(255, 255, 255, 0.20);
     border: 1px solid rgba(255, 255, 255, 0.25);
-
     padding: 10px 16px;
     border-radius: 30px;
-
     font-size: 14px;
     font-weight: bold;
-
     backdrop-filter: blur(6px);
 }
 
-
-/* ======================================================
-   9) CARDS PADRÃO
-====================================================== */
+/* ===================== CARDS PADRÃO ===================== */
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -392,9 +297,7 @@ ul {
     background: #ffffff;
     border-radius: 14px;
     padding: 18px;
-
     border: 1px solid #eee;
-
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
     transition: 0.3s;
 }
@@ -418,149 +321,27 @@ ul {
 .card img {
     width: 100%;
     height: 180px;
-
     object-fit: cover;
     border-radius: 12px;
-
     margin-bottom: 12px;
 }
 
-
-/* ======================================================
-   10) LINHAS COM ÍCONES
-====================================================== */
-.info {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    font-size: 14px;
-    margin-bottom: 6px;
-}
-
-
-/* ======================================================
-   11) BOTÃO DENTRO DOS CARDS
-====================================================== */
-.card .btn,
-.card .button {
+.card .btn {
     width: 100%;
     text-align: center;
     margin-top: 12px;
 }
 
-
-/* ======================================================
-   12) IMAGEM PRINCIPAL SUSTENTABILIDADE
-====================================================== */
-.img-sustentabilidade {
-    width: 100%;
-    max-width: 900px;
-
-    display: block;
-    margin: 25px auto;
-
-    border-radius: 18px;
-    box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.10);
-}
-
-
-/* ======================================================
-   13) FORMULÁRIOS
-====================================================== */
-select,
-input,
-textarea {
-    width: 100%;
-    padding: 12px;
-
-    border-radius: 12px;
-    border: 1px solid #ccc;
-
-    margin-top: 6px;
+/* ===================== LINHAS COM ÍCONES ===================== */
+.info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     font-size: 14px;
+    margin-bottom: 6px;
 }
 
-form {
-    margin-top: 20px;
-}
-
-textarea {
-    resize: none;
-}
-
-#mensagemSucesso {
-    margin-top: 15px;
-    font-weight: bold;
-    color: green;
-}
-
-
-/* ======================================================
-   14) BOTÃO VOLTAR AO TOPO
-====================================================== */
-#btnTopo {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-
-    background: #7C5CBF;
-    color: white;
-    border: none;
-
-    padding: 12px 14px;
-    border-radius: 50%;
-
-    cursor: pointer;
-    font-size: 16px;
-
-    display: none;
-
-    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.20);
-}
-
-#btnTopo:hover {
-    background: #5f44a0;
-}
-
-
-/* ======================================================
-   RODAPÉ (FOOTER) - PROFISSIONAL
-====================================================== */
-.site-footer {
-    background: #ffffff;
-    text-align: center;
-
-    padding: 18px 12px;
-    margin-top: 35px;
-
-    border-top: 1px solid rgba(0,0,0,0.08);
-
-    font-size: 14px;
-    color: #555;
-}
-
-.site-footer p {
-    margin: 0;
-}
-
-/* ======================================================
-   HERO CONTENT (BLOCO INTERNO DO INDEX)
-====================================================== */
-.hero {
-    margin-top: 30px;
-}
-
-.hero-content h3 {
-    font-size: 24px;
-    margin-top: 35px;
-    margin-bottom: 15px;
-    color: #7C5CBF;
-}
-
-/* ======================================================
-   INFO CARDS (BENEFÍCIOS)
-====================================================== */
+/* ===================== BENEFÍCIOS (INDEX) ===================== */
 .info-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -585,9 +366,7 @@ textarea {
     color: #5f44a0;
 }
 
-/* ======================================================
-   DIGITAL SECTION (CAPACITAÇÃO)
-====================================================== */
+/* ===================== DIGITAL SECTION ===================== */
 .digital-section {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -629,9 +408,7 @@ textarea {
     box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.05);
 }
 
-/* ======================================================
-   PASSO A PASSO
-====================================================== */
+/* ===================== PASSO A PASSO ===================== */
 .steps {
     margin-top: 20px;
 }
@@ -655,9 +432,7 @@ textarea {
     font-weight: bold;
 }
 
-/* ======================================================
-   DEPOIMENTOS
-====================================================== */
+/* ===================== DEPOIMENTOS ===================== */
 .testimonials {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -673,9 +448,7 @@ textarea {
     box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.06);
 }
 
-/* ======================================================
-   CTA FINAL
-====================================================== */
+/* ===================== CTA FINAL ===================== */
 .cta {
     margin-top: 35px;
     padding: 25px;
@@ -691,9 +464,7 @@ textarea {
     margin-bottom: 10px;
 }
 
-/* ======================================================
-   SUSTENTABILIDADE NA PRÁTICA
-====================================================== */
+/* ===================== SUSTENTABILIDADE ===================== */
 .sustentabilidade-pratica {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -726,17 +497,78 @@ textarea {
     color: #2f6e5c;
 }
 
-/* ======================================================
-   16) RESPONSIVIDADE (CELULAR)
-====================================================== */
-@media (max-width: 768px) {
+.img-sustentabilidade {
+    width: 100%;
+    max-width: 900px;
+    display: block;
+    margin: 25px auto;
+    border-radius: 18px;
+    box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.10);
+}
 
-    .info-cards,
-    .digital-cards,
-    .testimonials,
-    .pratica-cards {
-        grid-template-columns: 1fr;
-    }
+/* ===================== FORMULÁRIOS ===================== */
+select,
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+textarea {
+    resize: none;
+}
+
+#mensagemSucesso {
+    margin-top: 15px;
+    font-weight: bold;
+    color: green;
+}
+
+/* ===================== BOTÃO TOPO ===================== */
+#btnTopo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #7C5CBF;
+    color: white;
+    border: none;
+    padding: 12px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    display: none;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.20);
+}
+
+#btnTopo:hover {
+    background: #5f44a0;
+}
+
+/* ===================== FOOTER ===================== */
+.site-footer {
+    background: #ffffff;
+    text-align: center;
+    padding: 18px 12px;
+    margin-top: 35px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    font-size: 14px;
+    color: #555;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* ===================== RESPONSIVO ===================== */
+@media (max-width: 768px) {
 
     .container {
         padding: 25px;
@@ -760,7 +592,11 @@ textarea {
         justify-content: center;
     }
 
-    .cards {
+    .cards,
+    .digital-cards,
+    .info-cards,
+    .testimonials,
+    .pratica-cards {
         grid-template-columns: 1fr;
     }
 

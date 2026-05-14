@@ -1,66 +1,37 @@
 <!DOCTYPE html>
-<!-- ======================================================
-     ARQUIVO: contato.html
-     PROJETO: Empreenda com Sabor
-     OBJETIVO: Página de cadastro e contato para empreendedoras
-     PADRÃO VISUAL: Igual ao protótipo (moderno e clean)
-====================================================== -->
-
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <!-- Permite acentos e caracteres especiais -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Responsividade para celular/tablet -->
-
     <title>Contato | Empreenda com Sabor</title>
-
-    <!-- CSS principal do projeto -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- ======================================================
-         CABEÇALHO MODERNO (PADRÃO DO PROTÓTIPO)
-         Contém:
-         - Nome do site
-         - Subtítulo
-         - Menu com botões arredondados
-    ======================================================= -->
+    <!-- HEADER PADRÃO -->
     <header class="top-header">
+        <div class="header-content">
 
-        <div class="logo-area">
-            <h1>Empreenda com Sabor</h1>
+            <div class="logo-area">
+                <h1>Empreenda com Sabor</h1>
+                <p>Uma plataforma de inclusão digital para fortalecer mulheres empreendedoras do setor alimentício.</p>
+            </div>
 
-            <p>
-                Uma plataforma de inclusão digital para fortalecer mulheres empreendedoras do setor alimentício.
-            </p>
+            <nav class="menu">
+                <a href="index.html">🏠 Início</a>
+                <a href="empreendedoras.html">👩‍🍳 Empreendedoras</a>
+                <a href="sustentabilidade.html">🌿 Sustentabilidade</a>
+                <a href="contato.html">✉️ Contato</a>
+            </nav>
+
         </div>
-
-        <!-- Menu principal -->
-        <nav class="menu">
-            <a href="index.html">🏠 Início</a>
-            <a href="empreendedoras.html">👩‍🍳 Empreendedoras</a>
-            <a href="sustentabilidade.html">🌿 Sustentabilidade</a>
-            <a href="contato.html">✉️ Contato</a>
-        </nav>
-
     </header>
 
-
-    <!-- ======================================================
-         CONTEÚDO PRINCIPAL
-         Tudo dentro do container branco central
-    ======================================================= -->
+    <!-- CONTEÚDO -->
     <main class="container">
 
-        <!-- ======================================================
-             BANNER PADRÃO DA PÁGINA
-             Mesma identidade visual do protótipo
-        ======================================================= -->
         <section class="banner">
 
             <h2>Cadastro de Empreendedoras</h2>
@@ -78,10 +49,6 @@
 
         </section>
 
-
-        <!-- ======================================================
-             SEÇÃO EXPLICATIVA
-        ======================================================= -->
         <h2>Cadastre seu Negócio</h2>
 
         <p>
@@ -89,24 +56,14 @@
             Após o envio, o cadastro será analisado e poderá aparecer na página de empreendedoras.
         </p>
 
-
-        <!-- ======================================================
-             FORMULÁRIO DE CADASTRO
-             ID usado no JavaScript: formCadastro
-        ======================================================= -->
         <form id="formCadastro">
 
-            <!-- Nome -->
             <label for="nome"><strong>Nome completo:</strong></label>
             <input type="text" id="nome" placeholder="Ex: Maria da Silva" required>
 
-
-            <!-- Produto -->
             <label for="produto"><strong>Produto principal:</strong></label>
             <input type="text" id="produto" placeholder="Ex: Bolos caseiros, marmitas, doces..." required>
 
-
-            <!-- Cidade -->
             <label for="cidade"><strong>Cidade:</strong></label>
             <select id="cidade" required>
                 <option value="">Selecione sua cidade</option>
@@ -116,37 +73,19 @@
                 <option value="Tijucas">Tijucas</option>
             </select>
 
-
-            <!-- WhatsApp -->
             <label for="telefone"><strong>WhatsApp:</strong></label>
             <input type="tel" id="telefone" placeholder="Ex: (48) 99999-9999" required>
 
-
-            <!-- Descrição -->
             <label for="descricao"><strong>Descrição do seu negócio:</strong></label>
             <textarea id="descricao" rows="5" placeholder="Conte um pouco sobre seus produtos e seu diferencial..."
                 required></textarea>
 
-
-            <!-- Botão enviar -->
-            <button type="submit" class="btn">
-                Enviar Cadastro
-            </button>
+            <button type="submit" class="btn">Enviar Cadastro</button>
 
         </form>
 
-
-        <!-- ======================================================
-             MENSAGEM DE SUCESSO
-             Mostrada pelo JavaScript após enviar o formulário
-        ======================================================= -->
         <p id="mensagemSucesso"></p>
 
-
-        <!-- ======================================================
-             BLOCO EXTRA: CONTATO DIRETO
-             Parte informativa (deixa a página mais completa)
-        ======================================================= -->
         <section style="margin-top: 40px;">
 
             <h2>Outras formas de contato</h2>
@@ -166,19 +105,12 @@
 
     </main>
 
-
-    <!-- ======================================================
-         RODAPÉ PADRÃO
-    ======================================================= -->
+    <!-- FOOTER PADRÃO -->
     <footer class="site-footer">
         <p>© 2026 Empreenda com Sabor. Todos os direitos reservados.</p>
     </footer>
 
-
-    <!-- Botão voltar ao topo -->
     <button id="btnTopo">↑</button>
-
-    <!-- JavaScript -->
     <script src="js/script.js"></script>
 
 </body>
