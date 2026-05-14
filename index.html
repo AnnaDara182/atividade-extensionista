@@ -1,98 +1,322 @@
 <!DOCTYPE html>
-<!-- Declaração do HTML5 -->
+<!-- ======================================================
+     ARQUIVO: index.html
+     PROJETO: Empreenda com Sabor
+     OBJETIVO: Página inicial do site
+====================================================== -->
 
 <html lang="pt-BR">
-<!-- Define o idioma do site como português do Brasil -->
 
 <head>
     <meta charset="UTF-8">
-    <!-- Permite caracteres especiais como ç, ã, é -->
+    <!-- Permite acentos e caracteres especiais -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Responsividade: adapta o site para celular -->
+    <!-- Responsividade -->
 
-    <title>Empreendedoras Alimentícias</title>
-    <!-- Título exibido na aba do navegador -->
+    <title>Empreenda com Sabor</title>
 
+    <!-- Importa o CSS principal -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Importa o arquivo CSS principal -->
 </head>
 
 <body>
-    <!-- Corpo do site -->
 
     <!-- ======================================================
-         CABEÇALHO DO SITE (HEADER)
-         Contém o nome do site e o menu de navegação
+         HEADER MODERNO (IGUAL PROTÓTIPO)
     ======================================================= -->
-    <header>
-        <h1>Empreendedoras Alimentícias</h1>
+    <header class="top-header">
 
-        <nav>
-            <!-- Links para navegar entre as páginas -->
-            <a href="index.html">Início</a>
-            <a href="empreendedoras.html">Empreendedoras</a>
-            <a href="sustentabilidade.html">Sustentabilidade</a>
-            <a href="contato.html">Contato</a>
-        </nav>
+        <div class="header-content">
+
+            <!-- Logo + subtítulo -->
+            <div class="logo-area">
+                <h1>Empreenda com Sabor</h1>
+                <p>Uma plataforma de inclusão digital para fortalecer mulheres empreendedoras do setor alimentício.</p>
+            </div>
+
+            <!-- Menu em botões brancos com ícones -->
+            <nav class="menu">
+                <a href="index.html"><span>🏠</span> Início</a>
+                <a href="empreendedoras.html"><span>👩‍🍳</span> Empreendedoras</a>
+                <a href="sustentabilidade.html"><span>🌿</span> Sustentabilidade</a>
+                <a href="contato.html"><span>✉️</span> Contato</a>
+            </nav>
+
+        </div>
+
     </header>
 
-    <!-- ======================================================
-         BANNER PRINCIPAL
-         Seção inicial com destaque visual
-    ======================================================= -->
-    <section class="banner">
-        <h2>Fortalecendo mulheres empreendedoras</h2>
-
-        <p>
-            Este site foi criado para divulgar mulheres microempreendedoras do setor alimentício em Palhoça e São José (SC),
-            promovendo inclusão digital e incentivando o consumo local.
-        </p>
-    </section>
 
     <!-- ======================================================
-         CONTEÚDO PRINCIPAL
-         Container branco central com informações do projeto
+         CONTEÚDO PRINCIPAL DA HOME
     ======================================================= -->
     <main class="container">
 
-        <h2>Sobre o Projeto</h2>
+        <!-- ======================================================
+             HERO PRINCIPAL (DEGRADÊ + TEXTO + IMAGEM)
+        ======================================================= -->
+        <section class="hero-index">
 
-        <p>
-            Este projeto extensionista tem como objetivo apoiar mulheres empreendedoras do setor alimentício,
-            oferecendo visibilidade digital e facilitando o contato direto com clientes.
-        </p>
+            <div class="hero-index-text">
 
-        <h2>Objetivos</h2>
+                <h2>Empoderamento Feminino através da Inclusão Digital</h2>
 
-        <ul>
-            <li>Divulgar empreendedoras locais.</li>
-            <li>Facilitar o contato via WhatsApp.</li>
-            <li>Incentivar consumo local e sustentável.</li>
-            <li>Promover inclusão digital.</li>
-        </ul>
+                <p>
+                    O <strong>Empreenda com Sabor</strong> conecta mulheres empreendedoras do setor alimentício
+                    a novos clientes, fortalecendo a autonomia financeira e incentivando negócios locais.
+                </p>
 
-        <!-- Botão que leva para a página de empreendedoras -->
-        <a class="button" href="empreendedoras.html">
-            Ver Empreendedoras
-        </a>
+                <!-- Botões padronizados (mesmo estilo) -->
+                <div class="hero-buttons">
+                    <a class="btn" href="empreendedoras.html">👩‍🍳 Ver Empreendedoras</a>
+                    <a class="btn" href="contato.html">📝 Cadastrar meu Negócio</a>
+                </div>
+
+            </div>
+
+            <div class="hero-index-image">
+                <img src="img/hero.jpg" alt="Mulher empreendedora na cozinha">
+            </div>
+
+        </section>
+
+
+        <!-- ======================================================
+             BLOCO DE CONTEÚDO COMPLETO (TEXTO + SEÇÕES)
+        ======================================================= -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <h3>Por que esse projeto existe?</h3>
+
+                <p>
+                    Muitas mulheres empreendedoras do setor alimentício possuem talento e produtos incríveis,
+                    mas não têm acesso fácil à divulgação digital. A falta de visibilidade online reduz oportunidades
+                    de venda e dificulta o crescimento do negócio.
+                </p>
+
+                <p>
+                    O <strong>Empreenda com Sabor</strong> busca reduzir essa desigualdade digital oferecendo uma
+                    vitrine simples
+                    e acessível, fortalecendo o empoderamento feminino, a autonomia financeira e a valorização da
+                    economia local.
+                </p>
+
+
+
+                <!-- ======================================================
+     SEÇÃO: INCLUSÃO DIGITAL E CAPACITAÇÃO
+     Objetivo: reforçar o impacto social do projeto
+====================================================== -->
+                <section class="digital-section">
+
+                    <h2>Capacitação e Inclusão Digital</h2>
+
+                    <p class="section-description">
+                        A inclusão digital é essencial para que mulheres empreendedoras possam divulgar seus produtos,
+                        conquistar novos clientes e fortalecer sua autonomia financeira. O <strong>Empreenda com
+                            Sabor</strong>
+                        também incentiva o aprendizado digital com dicas simples e práticas.
+                    </p>
+
+                    <!-- ======================================================
+         GRID DE CARDS COM DICAS DIGITAIS
+    ======================================================= -->
+                    <div class="digital-cards">
+
+                        <!-- CARD 1 -->
+                        <div class="digital-card">
+                            <h3>📸 Divulgação com Fotos Melhores</h3>
+                            <p>
+                                Tire fotos em um local bem iluminado, use fundos neutros e mostre detalhes do produto.
+                                Isso aumenta muito o interesse do cliente.
+                            </p>
+                        </div>
+
+                        <!-- CARD 2 -->
+                        <div class="digital-card">
+                            <h3>📲 WhatsApp Business</h3>
+                            <p>
+                                Use o WhatsApp Business para criar catálogo, mensagens automáticas e responder mais
+                                rápido.
+                                Isso transmite mais profissionalismo.
+                            </p>
+                        </div>
+
+                        <!-- CARD 3 -->
+                        <div class="digital-card">
+                            <h3>📢 Redes Sociais Estratégicas</h3>
+                            <p>
+                                Publique conteúdos no Instagram e Facebook com frequência.
+                                Mostre bastidores, promoções e depoimentos de clientes.
+                            </p>
+                        </div>
+
+                        <!-- CARD 4 -->
+                        <div class="digital-card">
+                            <h3>🧾 Organização de Pedidos</h3>
+                            <p>
+                                Anote os pedidos em uma planilha ou caderno, organize datas e entregas.
+                                Isso evita erros e melhora a experiência do cliente.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- ======================================================
+         CHAMADA PARA AÇÃO
+    ======================================================= -->
+                    <div class="digital-cta">
+                        <h3>Empoderamento começa com oportunidade</h3>
+
+                        <p>
+                            Se você é empreendedora, cadastre seu negócio e faça parte dessa rede.
+                            Se você é cliente, apoie o comércio local e fortaleça mulheres incríveis.
+                        </p>
+
+                        <a href="contato.html" class="btn">Quero Cadastrar Meu Negócio</a>
+                    </div>
+
+                </section>
+
+
+                <!-- ======================================================
+                     BENEFÍCIOS
+                ======================================================= -->
+                <h3>Como o site pode te ajudar?</h3>
+
+                <div class="info-cards">
+
+                    <div class="info-card">
+                        <h4>📢 Divulgação Gratuita</h4>
+                        <p>Seu negócio ganha visibilidade para clientes que buscam produtos caseiros e de qualidade.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>📲 Contato Direto</h4>
+                        <p>O cliente fala diretamente com você pelo WhatsApp, sem intermediários.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>💰 Mais Vendas</h4>
+                        <p>Quanto mais pessoas encontram seu trabalho, maior é a chance de aumentar suas vendas.</p>
+                    </div>
+
+                </div>
+
+
+                <!-- ======================================================
+                     PASSO A PASSO
+                ======================================================= -->
+                <h3>Como funciona?</h3>
+
+                <div class="steps">
+
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <div>
+                            <h4>Cadastre seu negócio</h4>
+                            <p>Preencha o formulário com nome, produto e contato.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <div>
+                            <h4>Apareça na vitrine</h4>
+                            <p>Seu perfil pode ser exibido na página de empreendedoras.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <div>
+                            <h4>Receba pedidos</h4>
+                            <p>Clientes podem entrar em contato diretamente via WhatsApp.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <div>
+                            <h4>Fortaleça sua renda</h4>
+                            <p>Com mais visibilidade, aumentam as oportunidades de venda e crescimento.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- ======================================================
+                     DEPOIMENTOS
+                ======================================================= -->
+                <h3>Histórias Inspiradoras</h3>
+
+                <div class="testimonials">
+
+                    <div class="testimonial">
+                        <p>
+                            “Depois que comecei a divulgar meu trabalho online, consegui aumentar meus pedidos e ganhar
+                            mais confiança.”
+                        </p>
+                        <strong>— Ana Oliveira</strong>
+                    </div>
+
+                    <div class="testimonial">
+                        <p>
+                            “A internet me ajudou a alcançar pessoas que nunca tinham ouvido falar do meu negócio.”
+                        </p>
+                        <strong>— Maria Silva</strong>
+                    </div>
+
+                    <div class="testimonial">
+                        <p>
+                            “Ter um espaço digital para divulgar meu produto faz toda diferença. Hoje consigo organizar
+                            melhor minhas vendas.”
+                        </p>
+                        <strong>— Carla Santos</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- ======================================================
+                     CTA FINAL
+                ======================================================= -->
+                <div class="cta">
+
+                    <h3>Você também pode fazer parte dessa rede</h3>
+
+                    <p>
+                        Cadastre seu negócio e aumente sua visibilidade.
+                        Empoderamento começa com oportunidade.
+                    </p>
+
+                    <a class="btn" href="contato.html">Cadastrar meu Negócio</a>
+
+                </div>
+
+            </div>
+
+        </section>
 
     </main>
 
+
     <!-- ======================================================
-         RODAPÉ
+         RODAPÉ PADRÃO
     ======================================================= -->
-    <footer>
-        <p>Projeto Extensionista - UNINTER | ADS</p>
+    <footer class="site-footer">
+        <p>© 2026 Empreenda com Sabor. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- ======================================================
-         BOTÃO VOLTAR AO TOPO
-         Controlado pelo JavaScript
-    ======================================================= -->
+
+    <!-- Botão voltar ao topo -->
     <button id="btnTopo">↑</button>
 
-    <!-- Importa o JavaScript do projeto -->
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
 
 </body>

@@ -1,8 +1,8 @@
 /* ======================================================
    ARQUIVO: style.css
-   PROJETO: Empreendedoras Alimentícias
-   OBJETIVO: Definir layout, cores e responsividade do site
-   TEMA: Clean / Pastel Feminino (Lilás + Menta)
+   PROJETO: Empreenda com Sabor
+   OBJETIVO: Estilo completo do site (layout, cores e responsividade)
+   TEMA: Feminino moderno (Lilás + Menta)
 ====================================================== */
 
 
@@ -17,101 +17,44 @@
 
 
 /* ======================================================
-   2) ESTILO GERAL DO SITE (BODY)
+   2) ESTILO GLOBAL DO SITE
 ====================================================== */
 body {
     font-family: Arial, sans-serif;
-    background-color: #FAFAFA; /* fundo claro */
-    color: #2B2B2B; /* texto escuro para boa leitura */
+    background-color: #FAFAFA;
+    color: #2B2B2B;
     line-height: 1.6;
 }
 
 
 /* ======================================================
-   3) CABEÇALHO (HEADER) E MENU (NAV)
-====================================================== */
-header {
-    background-color: #7C5CBF; /* lilás elegante */
-    padding: 15px 20px;
-
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    box-shadow: 0px 2px 10px rgba(0,0,0,0.15);
-}
-
-header h1 {
-    text-align: center;
-    color: white;
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-nav {
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 10px;
-    font-size: 14px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-
-/* ======================================================
-   4) BANNER PRINCIPAL
-====================================================== */
-.banner {
-    background: linear-gradient(to right, #7C5CBF, #A7D7C5); /* lilás + menta */
-    padding: 50px 20px;
-    text-align: center;
-    color: white;
-}
-
-.banner h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.banner p {
-    font-size: 16px;
-    max-width: 700px;
-    margin: auto;
-}
-
-
-/* ======================================================
-   5) CONTAINER PADRÃO
+   3) CONTAINER PADRÃO (ÁREA CENTRAL DO SITE)
 ====================================================== */
 .container {
-    width: 90%;
-    max-width: 1000px;
-    margin: 25px auto;
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
+    width: 94%;
+    max-width: 1300px;
+    margin: 30px auto;
 
-    box-shadow: 0px 2px 15px rgba(0,0,0,0.08);
+    background: white;
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 
 /* ======================================================
-   6) TIPOGRAFIA PADRÃO
+   4) TIPOGRAFIA PADRÃO
 ====================================================== */
 h2 {
     margin-bottom: 15px;
-    color: #7C5CBF; /* lilás */
+    color: #7C5CBF;
 }
 
 p {
     margin-bottom: 15px;
+    color: #444;
 }
 
 ul {
@@ -121,102 +64,420 @@ ul {
 
 
 /* ======================================================
-   7) BOTÕES PADRÃO
+   5) HEADER (CABEÇALHO) IGUAL AO PROTÓTIPO
 ====================================================== */
-.button {
-    display: inline-block;
-    background-color: #7C5CBF; /* lilás */
+.top-header {
+    background: linear-gradient(to right, #7C5CBF, #A7D7C5);
+    padding: 40px 20px;
+
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ------------------------------------------------------
+   BOLAS DECORATIVAS NO FUNDO (IGUAL A IMAGEM)
+------------------------------------------------------ */
+.top-header::before {
+    content: "";
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    top: -70px;
+    left: -70px;
+
+    background: rgba(255, 255, 255, 0.20);
+    border-radius: 50%;
+}
+
+.top-header::after {
+    content: "";
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    bottom: -70px;
+    right: -70px;
+
+    background: rgba(255, 255, 255, 0.20);
+    border-radius: 50%;
+}
+
+/* ------------------------------------------------------
+   Área do logo/título do site
+------------------------------------------------------ */
+.logo-area h1 {
+    position: relative;
+    z-index: 2;
+
     color: white;
-    padding: 12px 18px;
-    border-radius: 8px;
+    font-size: 54px;
+    /* AQUI está o tamanho grande igual ao protótipo */
+    font-weight: bold;
+
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Subtítulo */
+.logo-area p {
+    position: relative;
+    z-index: 2;
+
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.92);
+
+    max-width: 780px;
+    margin: auto;
+    margin-bottom: 22px;
+}
+
+/* ------------------------------------------------------
+   MENU
+------------------------------------------------------ */
+.menu {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.menu a {
+    background: rgba(255, 255, 255, 0.95);
+    color: #6b4bbd;
+
     text-decoration: none;
     font-weight: bold;
+
+    padding: 12px 22px;
+    border-radius: 30px;
+
+    font-size: 15px;
+
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+
     transition: 0.3s;
 }
 
+.menu a:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+}
+
+
+/* ======================================================
+   6) BOTÕES PADRÃO DO SITE
+====================================================== */
+.btn,
+.button {
+    display: inline-block;
+
+    background-color: #7C5CBF;
+    color: white;
+
+    padding: 12px 18px;
+    border-radius: 12px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border: none;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn:hover,
 .button:hover {
-    background-color: #5f44a0; /* lilás mais escuro */
+    background-color: #5f44a0;
+    transform: scale(1.03);
+}
+
+/* Botão secundário (outline) */
+.btn-outline,
+.button-outline {
+    display: inline-block;
+
+    padding: 12px 18px;
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    color: white;
+    font-weight: bold;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: 0.3s;
+    backdrop-filter: blur(6px);
+}
+
+.btn-outline:hover,
+.button-outline:hover {
+    background: rgba(255, 255, 255, 0.28);
     transform: scale(1.03);
 }
 
 
 /* ======================================================
-   8) CARDS DE EMPREENDEDORAS
+   7) HERO PRINCIPAL (EMPODERAMENTO FEMININO)
+   Mantém sombra atrás (efeito de profundidade)
+====================================================== */
+.hero-index {
+    background: linear-gradient(to right, #7C5CBF, #A7D7C5);
+    border-radius: 25px;
+    padding: 55px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+
+    color: white;
+
+    margin-bottom: 45px;
+
+    /* sombra principal */
+    box-shadow: 0px 18px 40px rgba(0, 0, 0, 0.18);
+
+    /* borda clara interna */
+    border: 6px solid rgba(255, 255, 255, 0.55);
+}
+
+/* Sombra extra atrás (igual a imagem) */
+.hero-index::before {
+    content: "";
+    position: absolute;
+}
+
+/* Texto do hero */
+.hero-index-text {
+    flex: 1;
+}
+
+.hero-index-text h2 {
+    font-size: 52px;
+    margin-bottom: 18px;
+    color: white;
+
+    line-height: 1.15;
+    text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.hero-index-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* Botões dentro do hero */
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+/* Ajuste para os dois botões ficarem iguais */
+.hero-buttons .btn,
+.hero-buttons .button {
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(6px);
+}
+
+.hero-buttons .btn:hover,
+.hero-buttons .button:hover {
+    background: rgba(255, 255, 255, 0.30);
+}
+
+/* Imagem do hero */
+.hero-index-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-index-image img {
+    width: 100%;
+    max-width: 420px;
+
+    border-radius: 18px;
+    object-fit: cover;
+
+    background: white;
+    padding: 10px;
+
+    box-shadow: 0px 10px 26px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ======================================================
+   8) BANNER PADRÃO (PÁGINAS INTERNAS)
+====================================================== */
+.banner {
+    background: linear-gradient(to right, #7C5CBF, #A7D7C5);
+    padding: 40px 30px;
+    border-radius: 22px;
+
+    text-align: center;
+    color: white;
+
+    width: 100%;
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.12);
+
+    margin-bottom: 35px;
+}
+
+.banner h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.banner p {
+    font-size: 16px;
+    max-width: 750px;
+    margin: auto;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.banner-highlights {
+    margin-top: 25px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.banner-highlights span {
+    background: rgba(255, 255, 255, 0.20);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    padding: 10px 16px;
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    backdrop-filter: blur(6px);
+}
+
+
+/* ======================================================
+   9) CARDS PADRÃO
 ====================================================== */
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    gap: 18px;
 }
 
 .card {
-    background: #fff;
-    border-radius: 12px;
+    background: #ffffff;
+    border-radius: 14px;
     padding: 18px;
+
     border: 1px solid #eee;
 
-    box-shadow: 0px 2px 12px rgba(0,0,0,0.08);
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
+    box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.12);
 }
 
 .card h3 {
     color: #333;
-    margin-bottom: 8px;
-}
-
-.card p {
-    margin-bottom: 6px;
-    font-size: 14px;
-}
-
-
-/* ======================================================
-   9) IMAGENS DOS CARDS
-====================================================== */
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
     margin-bottom: 10px;
 }
 
+.card p {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #444;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+    border-radius: 12px;
+
+    margin-bottom: 12px;
+}
+
 
 /* ======================================================
-   10) INFORMAÇÕES COM ÍCONES (📍 📞 🍰)
+   10) LINHAS COM ÍCONES
 ====================================================== */
 .info {
     display: flex;
     align-items: center;
     gap: 8px;
+
     font-size: 14px;
     margin-bottom: 6px;
 }
 
 
 /* ======================================================
-   11) AJUSTE DO BOTÃO DENTRO DO CARD
+   11) BOTÃO DENTRO DOS CARDS
 ====================================================== */
+.card .btn,
 .card .button {
-    margin-top: 12px;
     width: 100%;
     text-align: center;
+    margin-top: 12px;
 }
 
 
 /* ======================================================
-   12) SELECT / INPUTS / TEXTAREA (FORMULÁRIOS)
+   12) IMAGEM PRINCIPAL SUSTENTABILIDADE
 ====================================================== */
-select, input, textarea {
+.img-sustentabilidade {
     width: 100%;
-    padding: 10px;
-    border-radius: 8px;
+    max-width: 900px;
+
+    display: block;
+    margin: 25px auto;
+
+    border-radius: 18px;
+    box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.10);
+}
+
+
+/* ======================================================
+   13) FORMULÁRIOS
+====================================================== */
+select,
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+
+    border-radius: 12px;
     border: 1px solid #ccc;
-    margin-top: 5px;
+
+    margin-top: 6px;
     font-size: 14px;
 }
 
@@ -236,14 +497,14 @@ textarea {
 
 
 /* ======================================================
-   13) BOTÃO VOLTAR AO TOPO
+   14) BOTÃO VOLTAR AO TOPO
 ====================================================== */
 #btnTopo {
     position: fixed;
     bottom: 20px;
     right: 20px;
 
-    background: #7C5CBF; /* lilás */
+    background: #7C5CBF;
     color: white;
     border: none;
 
@@ -255,7 +516,7 @@ textarea {
 
     display: none;
 
-    box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.20);
 }
 
 #btnTopo:hover {
@@ -264,28 +525,250 @@ textarea {
 
 
 /* ======================================================
-   14) RODAPÉ (FOOTER)
+   RODAPÉ (FOOTER) - PROFISSIONAL
 ====================================================== */
-footer {
-    background: #222;
-    color: white;
+.site-footer {
+    background: #ffffff;
     text-align: center;
-    padding: 15px;
-    margin-top: 25px;
+
+    padding: 18px 12px;
+    margin-top: 35px;
+
+    border-top: 1px solid rgba(0,0,0,0.08);
+
+    font-size: 14px;
+    color: #555;
 }
 
+.site-footer p {
+    margin: 0;
+}
 
 /* ======================================================
-   15) RESPONSIVIDADE (CELULAR)
+   HERO CONTENT (BLOCO INTERNO DO INDEX)
+====================================================== */
+.hero {
+    margin-top: 30px;
+}
+
+.hero-content h3 {
+    font-size: 24px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    color: #7C5CBF;
+}
+
+/* ======================================================
+   INFO CARDS (BENEFÍCIOS)
+====================================================== */
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.info-card {
+    background: #F8F4FF;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+}
+
+.info-card h4 {
+    margin-bottom: 8px;
+    color: #5f44a0;
+}
+
+/* ======================================================
+   DIGITAL SECTION (CAPACITAÇÃO)
+====================================================== */
+.digital-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.section-description {
+    margin-bottom: 25px;
+}
+
+.digital-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.digital-card {
+    background: #F1FBF7;
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.digital-card:hover {
+    transform: translateY(-4px);
+}
+
+.digital-card h3 {
+    margin-bottom: 10px;
+    color: #2f6e5c;
+}
+
+.digital-cta {
+    margin-top: 30px;
+    background: #F8F4FF;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* ======================================================
+   PASSO A PASSO
+====================================================== */
+.steps {
+    margin-top: 20px;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.step-number {
+    background: #7C5CBF;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* ======================================================
+   DEPOIMENTOS
+====================================================== */
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.testimonial {
+    background: #ffffff;
+    border-left: 5px solid #7C5CBF;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* ======================================================
+   CTA FINAL
+====================================================== */
+.cta {
+    margin-top: 35px;
+    padding: 25px;
+    background: linear-gradient(to right, #7C5CBF, #A7D7C5);
+    border-radius: 18px;
+    color: white;
+    text-align: center;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cta h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* ======================================================
+   SUSTENTABILIDADE NA PRÁTICA
+====================================================== */
+.sustentabilidade-pratica {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.subtext {
+    margin-bottom: 25px;
+}
+
+.pratica-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.pratica-card {
+    background: #F1FBF7;
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.pratica-card:hover {
+    transform: translateY(-4px);
+}
+
+.pratica-card h3 {
+    margin-bottom: 10px;
+    color: #2f6e5c;
+}
+
+/* ======================================================
+   16) RESPONSIVIDADE (CELULAR)
 ====================================================== */
 @media (max-width: 768px) {
+
+    .info-cards,
+    .digital-cards,
+    .testimonials,
+    .pratica-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 25px;
+    }
+
+    .logo-area h1 {
+        font-size: 34px;
+    }
+
+    .hero-index {
+        flex-direction: column;
+        text-align: center;
+        padding: 35px;
+    }
+
+    .hero-index-text h2 {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
 
     .cards {
         grid-template-columns: 1fr;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 8px;
+    .banner h2 {
+        font-size: 26px;
+    }
+
+    .img-sustentabilidade {
+        max-width: 100%;
     }
 }

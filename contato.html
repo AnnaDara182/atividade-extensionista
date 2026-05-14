@@ -1,119 +1,184 @@
 <!DOCTYPE html>
-<!-- Declaração do HTML5 -->
+<!-- ======================================================
+     ARQUIVO: contato.html
+     PROJETO: Empreenda com Sabor
+     OBJETIVO: Página de cadastro e contato para empreendedoras
+     PADRÃO VISUAL: Igual ao protótipo (moderno e clean)
+====================================================== -->
 
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <!-- Permite caracteres especiais -->
+    <!-- Permite acentos e caracteres especiais -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Responsividade -->
+    <!-- Responsividade para celular/tablet -->
 
-    <title>Contato e Cadastro</title>
+    <title>Contato | Empreenda com Sabor</title>
 
+    <!-- CSS principal do projeto -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Importa o CSS -->
 </head>
 
 <body>
 
     <!-- ======================================================
-         CABEÇALHO PADRÃO DO SITE
+         CABEÇALHO MODERNO (PADRÃO DO PROTÓTIPO)
+         Contém:
+         - Nome do site
+         - Subtítulo
+         - Menu com botões arredondados
     ======================================================= -->
-    <header>
-        <h1>Empreendedoras Alimentícias</h1>
+    <header class="top-header">
 
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="empreendedoras.html">Empreendedoras</a>
-            <a href="sustentabilidade.html">Sustentabilidade</a>
-            <a href="contato.html">Contato</a>
+        <div class="logo-area">
+            <h1>Empreenda com Sabor</h1>
+
+            <p>
+                Uma plataforma de inclusão digital para fortalecer mulheres empreendedoras do setor alimentício.
+            </p>
+        </div>
+
+        <!-- Menu principal -->
+        <nav class="menu">
+            <a href="index.html">🏠 Início</a>
+            <a href="empreendedoras.html">👩‍🍳 Empreendedoras</a>
+            <a href="sustentabilidade.html">🌿 Sustentabilidade</a>
+            <a href="contato.html">✉️ Contato</a>
         </nav>
+
     </header>
 
-    <!-- ======================================================
-         BANNER DA PÁGINA
-    ======================================================= -->
-    <section class="banner">
-        <h2>Contato e Cadastro</h2>
-        <p>Quer divulgar seu negócio? Preencha o formulário abaixo.</p>
-    </section>
 
     <!-- ======================================================
          CONTEÚDO PRINCIPAL
-         Formulário de cadastro demonstrativo
+         Tudo dentro do container branco central
     ======================================================= -->
     <main class="container">
 
-        <h2>Formulário de Cadastro de Empreendedora</h2>
+        <!-- ======================================================
+             BANNER PADRÃO DA PÁGINA
+             Mesma identidade visual do protótipo
+        ======================================================= -->
+        <section class="banner">
+
+            <h2>Cadastro de Empreendedoras</h2>
+
+            <p>
+                Cadastre seu negócio gratuitamente e aumente sua visibilidade.
+                Vamos fortalecer juntas o empreendedorismo feminino no setor alimentício.
+            </p>
+
+            <div class="banner-highlights">
+                <span>📢 Divulgação gratuita</span>
+                <span>📲 Contato direto</span>
+                <span>💜 Apoio ao empoderamento</span>
+            </div>
+
+        </section>
+
+
+        <!-- ======================================================
+             SEÇÃO EXPLICATIVA
+        ======================================================= -->
+        <h2>Cadastre seu Negócio</h2>
 
         <p>
-            Preencha os dados abaixo para solicitar a inclusão do seu negócio no site.
-            (Este formulário é demonstrativo para fins acadêmicos.)
+            Preencha os dados abaixo para cadastrar seu negócio na plataforma.
+            Após o envio, o cadastro será analisado e poderá aparecer na página de empreendedoras.
         </p>
 
-        <!-- Formulário controlado pelo JavaScript -->
+
+        <!-- ======================================================
+             FORMULÁRIO DE CADASTRO
+             ID usado no JavaScript: formCadastro
+        ======================================================= -->
         <form id="formCadastro">
 
-            <!-- Campo Nome -->
-            <label for="nome"><strong>Nome da Empreendedora:</strong></label>
-            <input type="text" id="nome" required placeholder="Ex: Maria da Silva">
+            <!-- Nome -->
+            <label for="nome"><strong>Nome completo:</strong></label>
+            <input type="text" id="nome" placeholder="Ex: Maria da Silva" required>
 
-            <br><br>
 
-            <!-- Campo Produto -->
-            <label for="produto"><strong>Produto Principal:</strong></label>
-            <input type="text" id="produto" required placeholder="Ex: Bolos caseiros">
+            <!-- Produto -->
+            <label for="produto"><strong>Produto principal:</strong></label>
+            <input type="text" id="produto" placeholder="Ex: Bolos caseiros, marmitas, doces..." required>
 
-            <br><br>
 
-            <!-- Campo Cidade -->
+            <!-- Cidade -->
             <label for="cidade"><strong>Cidade:</strong></label>
             <select id="cidade" required>
-                <option value="">Selecione</option>
+                <option value="">Selecione sua cidade</option>
                 <option value="Palhoça">Palhoça</option>
                 <option value="São José">São José</option>
+                <option value="Florianópolis">Florianópolis</option>
+                <option value="Tijucas">Tijucas</option>
             </select>
 
-            <br><br>
 
-            <!-- Campo WhatsApp -->
+            <!-- WhatsApp -->
             <label for="telefone"><strong>WhatsApp:</strong></label>
-            <input type="text" id="telefone" required placeholder="Ex: (48) 99999-9999">
+            <input type="tel" id="telefone" placeholder="Ex: (48) 99999-9999" required>
 
-            <br><br>
 
-            <!-- Campo Descrição -->
-            <label for="descricao"><strong>Descrição do Negócio:</strong></label>
-            <textarea id="descricao" rows="4"
-                placeholder="Ex: Trabalho com doces e salgados para festas..."></textarea>
+            <!-- Descrição -->
+            <label for="descricao"><strong>Descrição do seu negócio:</strong></label>
+            <textarea id="descricao" rows="5" placeholder="Conte um pouco sobre seus produtos e seu diferencial..."
+                required></textarea>
 
-            <br><br>
 
-            <!-- Botão de envio -->
-            <button type="submit" class="button">
+            <!-- Botão enviar -->
+            <button type="submit" class="btn">
                 Enviar Cadastro
             </button>
 
         </form>
 
-        <!-- Mensagem de sucesso (aparece após enviar o formulário) -->
+
+        <!-- ======================================================
+             MENSAGEM DE SUCESSO
+             Mostrada pelo JavaScript após enviar o formulário
+        ======================================================= -->
         <p id="mensagemSucesso"></p>
+
+
+        <!-- ======================================================
+             BLOCO EXTRA: CONTATO DIRETO
+             Parte informativa (deixa a página mais completa)
+        ======================================================= -->
+        <section style="margin-top: 40px;">
+
+            <h2>Outras formas de contato</h2>
+
+            <p>
+                Caso tenha dúvidas sobre o projeto ou queira apoio para cadastrar seu negócio,
+                você pode entrar em contato diretamente.
+            </p>
+
+            <ul>
+                <li><strong>📍 Local:</strong> Tijucas - SC</li>
+                <li><strong>📧 Email:</strong> contato@empreendacomsabor.com</li>
+                <li><strong>📞 WhatsApp:</strong> (48) 99999-0000</li>
+            </ul>
+
+        </section>
 
     </main>
 
+
     <!-- ======================================================
-         RODAPÉ
+         RODAPÉ PADRÃO
     ======================================================= -->
-    <footer>
-        <p>Projeto Extensionista - UNINTER | ADS</p>
+    <footer class="site-footer">
+        <p>© 2026 Empreenda com Sabor. Todos os direitos reservados.</p>
     </footer>
+
 
     <!-- Botão voltar ao topo -->
     <button id="btnTopo">↑</button>
 
-    <!-- Importa JavaScript -->
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
 
 </body>

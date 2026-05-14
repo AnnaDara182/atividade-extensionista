@@ -1,66 +1,79 @@
 <!DOCTYPE html>
-<!-- Declaração do HTML5 -->
+<!-- ======================================================
+     ARQUIVO: empreendedoras.html
+     PROJETO: Empreenda com Sabor
+     OBJETIVO: Exibir lista de empreendedoras alimentícias
+====================================================== -->
 
 <html lang="pt-BR">
-<!-- Define o idioma como português do Brasil -->
 
 <head>
     <meta charset="UTF-8">
-    <!-- Permite caracteres especiais e acentuação -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Responsividade: adapta para celular/tablet -->
-
     <title>Empreendedoras</title>
-    <!-- Título exibido na aba do navegador -->
 
     <link rel="stylesheet" href="css/style.css">
-    <!-- Importa o arquivo CSS principal -->
 </head>
 
 <body>
 
     <!-- ======================================================
-         CABEÇALHO PADRÃO DO SITE
-         Contém o nome do site e o menu de navegação
+         HEADER PADRÃO (IGUAL INDEX)
     ======================================================= -->
-    <header>
-        <h1>Empreendedoras Alimentícias</h1>
+    <header class="top-header">
 
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="empreendedoras.html">Empreendedoras</a>
-            <a href="sustentabilidade.html">Sustentabilidade</a>
-            <a href="contato.html">Contato</a>
-        </nav>
+        <div class="header-content">
+
+            <div class="logo-area">
+                <h1>Empreenda com Sabor</h1>
+                <p>Uma plataforma de inclusão digital para fortalecer mulheres empreendedoras do setor alimentício.</p>
+            </div>
+
+            <nav class="menu">
+                <a href="index.html"><span>🏠</span> Início</a>
+                <a href="empreendedoras.html"><span>👩‍🍳</span> Empreendedoras</a>
+                <a href="sustentabilidade.html"><span>🌿</span> Sustentabilidade</a>
+                <a href="contato.html"><span>✉️</span> Contato</a>
+            </nav>
+
+        </div>
+
     </header>
 
 
     <!-- ======================================================
-         BANNER DA PÁGINA
-         Área de destaque com texto introdutório
-    ======================================================= -->
-    <section class="banner">
-        <h2>Empreendedoras Locais</h2>
-        <p>Conheça mulheres empreendedoras e entre em contato diretamente.</p>
-    </section>
-
-
-    <!-- ======================================================
-         CONTEÚDO PRINCIPAL DA PÁGINA
-         Contém o filtro e a lista de empreendedoras
+         CONTEÚDO PRINCIPAL
     ======================================================= -->
     <main class="container">
 
+        <section class="banner">
+
+            <h2>Empreendedoras Locais</h2>
+
+            <p>
+                Conheça mulheres empreendedoras do setor alimentício e entre em contato diretamente.
+                Apoie negócios locais e fortaleça o empreendedorismo feminino.
+            </p>
+
+            <div class="banner-highlights">
+                <span>📍 Filtre por cidade</span>
+                <span>📲 Contato direto</span>
+                <span>💜 Apoio ao empoderamento feminino</span>
+            </div>
+
+        </section>
+
+
         <h2>Lista de Empreendedoras</h2>
 
-        <!-- Label descreve o filtro -->
+        <p>
+            Aqui você encontra empreendedoras cadastradas na plataforma.
+            Você pode filtrar por cidade e falar diretamente pelo WhatsApp.
+        </p>
+
+
         <label for="filtroCidade"><strong>Filtrar por cidade:</strong></label>
 
-        <!--
-            O select permite selecionar uma cidade.
-            onchange chama a função filtrarCidade() do JavaScript.
-        -->
         <select id="filtroCidade" onchange="filtrarCidade()">
             <option value="todas">Todas</option>
             <option value="Palhoça">Palhoça</option>
@@ -68,58 +81,35 @@
         </select>
 
 
-        <!-- ======================================================
-             GRID DE CARDS
-             A classe cards cria o layout em grade (CSS Grid)
-        ======================================================= -->
         <div class="cards">
 
-
-            <!-- ==============================
-                 CARD 1
-            ============================== -->
             <div class="card" data-cidade="Palhoça">
-                <!--
-                    data-cidade armazena a cidade do card.
-                    O JavaScript usa isso para filtrar.
-                -->
-
                 <img src="img/bolo.jpg" alt="Bolos caseiros">
-                <!-- Imagem do produto -->
 
                 <h3>Maria Silva</h3>
-                <!-- Nome da empreendedora -->
 
-                <!-- Produto -->
                 <div class="info">
                     <span>🍰</span>
                     <span><strong>Produto:</strong> Bolos caseiros e tortas</span>
                 </div>
 
-                <!-- Cidade -->
                 <div class="info">
                     <span>📍</span>
                     <span><strong>Cidade:</strong> Palhoça - SC</span>
                 </div>
 
-                <!-- Contato -->
                 <div class="info">
                     <span>📞</span>
                     <span><strong>Contato:</strong> (48) 99999-9999</span>
                 </div>
 
-                <!-- Botão WhatsApp -->
-                <a class="button" href="https://wa.me/5548999999999" target="_blank">
+                <a class="btn" href="https://wa.me/5548999999999" target="_blank">
                     Falar no WhatsApp
                 </a>
             </div>
 
 
-            <!-- ==============================
-                 CARD 2
-            ============================== -->
             <div class="card" data-cidade="São José">
-
                 <img src="img/marmita.jpg" alt="Marmitas fitness">
 
                 <h3>Ana Oliveira</h3>
@@ -139,17 +129,13 @@
                     <span><strong>Contato:</strong> (48) 98888-8888</span>
                 </div>
 
-                <a class="button" href="https://wa.me/5548998888888" target="_blank">
+                <a class="btn" href="https://wa.me/5548998888888" target="_blank">
                     Falar no WhatsApp
                 </a>
             </div>
 
 
-            <!-- ==============================
-                 CARD 3
-            ============================== -->
             <div class="card" data-cidade="Palhoça">
-
                 <img src="img/doces.jpg" alt="Doces gourmet">
 
                 <h3>Carla Santos</h3>
@@ -169,17 +155,13 @@
                     <span><strong>Contato:</strong> (48) 97777-7777</span>
                 </div>
 
-                <a class="button" href="https://wa.me/5548997777777" target="_blank">
+                <a class="btn" href="https://wa.me/5548997777777" target="_blank">
                     Falar no WhatsApp
                 </a>
             </div>
 
 
-            <!-- ==============================
-                 CARD 4
-            ============================== -->
             <div class="card" data-cidade="São José">
-
                 <img src="img/salgados.jpg" alt="Salgados e kits festa">
 
                 <h3>Juliana Costa</h3>
@@ -199,34 +181,21 @@
                     <span><strong>Contato:</strong> (48) 96666-6666</span>
                 </div>
 
-                <a class="button" href="https://wa.me/5548996666666" target="_blank">
+                <a class="btn" href="https://wa.me/5548996666666" target="_blank">
                     Falar no WhatsApp
                 </a>
             </div>
 
         </div>
-        <!-- fim da div cards -->
 
     </main>
-    <!-- fim do conteúdo principal -->
 
-
-    <!-- ======================================================
-         RODAPÉ PADRÃO
-    ======================================================= -->
-    <footer>
-        <p>Projeto Extensionista - UNINTER | ADS</p>
+    <footer class="site-footer">
+        <p>© 2026 Empreenda com Sabor. Todos os direitos reservados.</p>
     </footer>
 
-
-    <!-- ======================================================
-         BOTÃO VOLTAR AO TOPO
-         Aparece ao rolar a página (controlado pelo JS)
-    ======================================================= -->
     <button id="btnTopo">↑</button>
 
-
-    <!-- Importa o JavaScript do projeto -->
     <script src="js/script.js"></script>
 
 </body>
