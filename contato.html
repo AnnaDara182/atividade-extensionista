@@ -10,7 +10,7 @@
 
 <body>
 
-    <!-- HEADER PADRÃO -->
+    <!-- HEADER -->
     <header class="top-header">
         <div class="header-content">
 
@@ -70,11 +70,11 @@
                 <option value="Palhoça">Palhoça</option>
                 <option value="São José">São José</option>
                 <option value="Florianópolis">Florianópolis</option>
-                <option value="Tijucas">Tijucas</option>
+                <option value="Outra">Outra (Colocar a cidade na descrição)</option>
             </select>
 
             <label for="telefone"><strong>WhatsApp:</strong></label>
-            <input type="tel" id="telefone" placeholder="Ex: (48) 99999-9999" required>
+            <input type="tel" id="telefone" placeholder="Ex: (48) 99999-9999" required minlength="10">
 
             <label for="descricao"><strong>Descrição do seu negócio:</strong></label>
             <textarea id="descricao" rows="5" placeholder="Conte um pouco sobre seus produtos e seu diferencial..."
@@ -84,33 +84,16 @@
 
         </form>
 
-        <p id="mensagemSucesso"></p>
-
-        <section style="margin-top: 40px;">
-
-            <h2>Outras formas de contato</h2>
-
-            <p>
-                Caso tenha dúvidas sobre o projeto ou queira apoio para cadastrar seu negócio,
-                você pode entrar em contato diretamente.
-            </p>
-
-            <ul>
-                <li><strong>📍 Local:</strong> Tijucas - SC</li>
-                <li><strong>📧 Email:</strong> contato@empreendacomsabor.com</li>
-                <li><strong>📞 WhatsApp:</strong> (48) 99999-0000</li>
-            </ul>
-
-        </section>
+        <p id="mensagemSucesso" role="alert"></p>
 
     </main>
 
-    <!-- FOOTER PADRÃO -->
+    <!-- FOOTER -->
     <footer class="site-footer">
         <p>© 2026 Empreenda com Sabor. Todos os direitos reservados.</p>
     </footer>
 
-    <button id="btnTopo">↑</button>
+    <button id="btnTopo" aria-label="Voltar ao topo">↑</button>
     <script src="js/script.js"></script>
 
 </body>

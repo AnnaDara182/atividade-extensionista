@@ -1,16 +1,11 @@
-/* ======================================================
-   STYLE.CSS - Empreenda com Sabor
-   Tema: Lilás + Menta (moderno feminino)
-====================================================== */
-
-/* ===================== RESET ===================== */
+/* -- RESET -- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===================== GERAL ===================== */
+/* -- GERAL -- */
 body {
     font-family: Arial, sans-serif;
     background-color: #FAFAFA;
@@ -28,7 +23,7 @@ body {
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* ===================== TIPOGRAFIA ===================== */
+/* -- TIPOGRAFIA -- */
 h2 {
     margin-bottom: 15px;
     color: #7C5CBF;
@@ -44,7 +39,7 @@ ul {
     margin-bottom: 15px;
 }
 
-/* ===================== HEADER ===================== */
+/* -- HEADER -- */
 .top-header {
     background: linear-gradient(to right, #7C5CBF, #A7D7C5);
     padding: 40px 20px;
@@ -54,7 +49,7 @@ ul {
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.12);
 }
 
-/* Bolas decorativas */
+/* BOLAS DECORATIVAS */
 .top-header::before,
 .top-header::after {
     content: "";
@@ -97,7 +92,7 @@ ul {
     margin-bottom: 22px;
 }
 
-/* ===================== MENU ===================== */
+/* -- MENU -- */
 .menu {
     display: flex;
     justify-content: center;
@@ -122,7 +117,16 @@ ul {
     transform: translateY(-2px);
 }
 
-/* ===================== BOTÕES ===================== */
+.menu a:focus,
+.btn:focus,
+select:focus,
+input:focus,
+textarea:focus {
+    outline: 3px solid #A7D7C5;
+    outline-offset: 3px;
+}
+
+/* -- BOTÕES -- */
 .btn {
     display: inline-block;
     background-color: #7C5CBF;
@@ -161,7 +165,7 @@ ul {
     transform: scale(1.03);
 }
 
-/* ===================== HERO INDEX ===================== */
+/* -- HERO INDEX -- */
 .hero-index {
     background: linear-gradient(to right, #7C5CBF, #A7D7C5);
     border-radius: 25px;
@@ -174,7 +178,6 @@ ul {
 
     color: white;
     margin-bottom: 45px;
-
     box-shadow: 0px 18px 40px rgba(0, 0, 0, 0.18);
     border: 6px solid rgba(255, 255, 255, 0.55);
 }
@@ -209,6 +212,7 @@ ul {
     background: rgba(255, 255, 255, 0.18);
     border: 1px solid rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(6px);
+    color: white;
 }
 
 .hero-buttons .btn:hover {
@@ -231,7 +235,7 @@ ul {
     box-shadow: 0px 10px 26px rgba(0, 0, 0, 0.25);
 }
 
-/* ===================== SEÇÕES INTERNAS ===================== */
+/* -- SEÇÕES INTERNAS -- */
 .hero {
     margin-top: 30px;
 }
@@ -243,7 +247,7 @@ ul {
     color: #7C5CBF;
 }
 
-/* ===================== BANNER ===================== */
+/* -- BANNER -- */
 .banner {
     background: linear-gradient(to right, #7C5CBF, #A7D7C5);
     padding: 40px 30px;
@@ -286,11 +290,12 @@ ul {
     backdrop-filter: blur(6px);
 }
 
-/* ===================== CARDS PADRÃO ===================== */
+/* -- CARDS PADRÃO -- */
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 18px;
+    margin-top: 20px
 }
 
 .card {
@@ -320,7 +325,7 @@ ul {
 
 .card img {
     width: 100%;
-    height: 180px;
+    height: 280px;
     object-fit: cover;
     border-radius: 12px;
     margin-bottom: 12px;
@@ -332,7 +337,7 @@ ul {
     margin-top: 12px;
 }
 
-/* ===================== LINHAS COM ÍCONES ===================== */
+/* -- LINHAS COM ÍCONES -- */
 .info {
     display: flex;
     align-items: center;
@@ -341,7 +346,7 @@ ul {
     margin-bottom: 6px;
 }
 
-/* ===================== BENEFÍCIOS (INDEX) ===================== */
+/* -- BENEFÍCIOS (INDEX) -- */
 .info-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -353,7 +358,7 @@ ul {
     background: #F8F4FF;
     border-radius: 16px;
     padding: 18px;
-    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 8px 18px #2f6e5c;
     transition: 0.3s;
 }
 
@@ -366,7 +371,7 @@ ul {
     color: #5f44a0;
 }
 
-/* ===================== DIGITAL SECTION ===================== */
+/* -- DIGITAL SECTION -- */
 .digital-section {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -408,7 +413,7 @@ ul {
     box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.05);
 }
 
-/* ===================== PASSO A PASSO ===================== */
+/* -- PASSO A PASSO -- */
 .steps {
     margin-top: 20px;
 }
@@ -432,23 +437,7 @@ ul {
     font-weight: bold;
 }
 
-/* ===================== DEPOIMENTOS ===================== */
-.testimonials {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    margin-top: 20px;
-}
-
-.testimonial {
-    background: #ffffff;
-    border-left: 5px solid #7C5CBF;
-    padding: 18px;
-    border-radius: 12px;
-    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.06);
-}
-
-/* ===================== CTA FINAL ===================== */
+/* -- CTA FINAL -- */
 .cta {
     margin-top: 35px;
     padding: 25px;
@@ -464,7 +453,7 @@ ul {
     margin-bottom: 10px;
 }
 
-/* ===================== SUSTENTABILIDADE ===================== */
+/* -- SUSTENTABILIDADE -- */
 .sustentabilidade-pratica {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -506,7 +495,7 @@ ul {
     box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.10);
 }
 
-/* ===================== FORMULÁRIOS ===================== */
+/* -- FORMULÁRIOS -- */
 select,
 input,
 textarea {
@@ -532,7 +521,7 @@ textarea {
     color: green;
 }
 
-/* ===================== BOTÃO TOPO ===================== */
+/* -- BOTÃO TOPO -- */
 #btnTopo {
     position: fixed;
     bottom: 20px;
@@ -552,7 +541,7 @@ textarea {
     background: #5f44a0;
 }
 
-/* ===================== FOOTER ===================== */
+/* -- FOOTER -- */
 .site-footer {
     background: #ffffff;
     text-align: center;
@@ -567,7 +556,7 @@ textarea {
     margin: 0;
 }
 
-/* ===================== RESPONSIVO ===================== */
+/* -- RESPONSIVO -- */
 @media (max-width: 768px) {
 
     .container {
@@ -606,5 +595,10 @@ textarea {
 
     .img-sustentabilidade {
         max-width: 100%;
+    }
+
+     .menu a {
+        padding: 14px 22px;
+        font-size: 16px;
     }
 }
