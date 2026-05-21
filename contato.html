@@ -69,27 +69,32 @@
 
         <form action="https://formsubmit.co/annadara182@gmail.com" method="POST">
 
+            <!-- Impede captcha -->
+            <input type="hidden" name="_captcha" value="false">
+
+            <!-- Página de sucesso -->
+            <input type="hidden" name="_next" value="https://SEUSITE.com/obrigado.html">
+
             <label for="nome"><strong>Nome completo:</strong></label>
-            <input type="text" id="nome" placeholder="Ex: Maria da Silva" required>
+            <input type="text" id="nome" name="nome" required>
 
             <label for="produto"><strong>Produto principal:</strong></label>
-            <input type="text" id="produto" placeholder="Ex: Bolos caseiros, marmitas, doces..." required>
+            <input type="text" id="produto" name="produto" required>
 
             <label for="cidade"><strong>Cidade:</strong></label>
-            <select id="cidade" required>
+            <select id="cidade" name="cidade" required>
                 <option value="">Selecione sua cidade</option>
                 <option value="Palhoça">Palhoça</option>
                 <option value="São José">São José</option>
                 <option value="Florianópolis">Florianópolis</option>
-                <option value="Outra">Outra (Colocar a cidade na descrição)</option>
+                <option value="Outra">Outra</option>
             </select>
 
             <label for="telefone"><strong>WhatsApp:</strong></label>
-            <input type="tel" id="telefone" placeholder="Ex: (48) 99999-9999" required minlength="10">
+            <input type="tel" id="telefone" name="telefone" required>
 
             <label for="descricao"><strong>Descrição do seu negócio:</strong></label>
-            <textarea id="descricao" rows="5" placeholder="Conte um pouco sobre seus produtos e seu diferencial..."
-                required></textarea>
+            <textarea id="descricao" name="descricao" rows="5" required></textarea>
 
             <button type="submit" class="btn">Enviar Cadastro</button>
 
