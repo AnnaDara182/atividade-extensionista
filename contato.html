@@ -67,13 +67,14 @@
             Após o envio, o cadastro será analisado e poderá aparecer na página de empreendedoras.
         </p>
 
-        <form action="https://formsubmit.co/annadara182@gmail.com" method="POST">
+        <form action="https://formsubmit.co/annadara182@gmail.com" method="POST" enctype="multipart/form-data">
 
             <!-- Impede captcha -->
             <input type="hidden" name="_captcha" value="false">
 
             <!-- Página de sucesso -->
-            <input type="hidden" name="_next" value="https://annadara182.github.io/atividade-extensionista/">
+            <input type="hidden" name="_next"
+                value="https://annadara182.github.io/atividade-extensionista.contato.html/">
 
             <label for="nome"><strong>Nome completo:</strong></label>
             <input type="text" id="nome" name="nome" required>
@@ -93,8 +94,8 @@
             <label for="telefone"><strong>WhatsApp:</strong></label>
             <input type="tel" id="telefone" name="telefone" required>
 
-            <label for="descricao"><strong>Descrição do seu negócio:</strong></label>
-            <textarea id="descricao" name="descricao" rows="5" required></textarea>
+            <label for="foto"><strong>Foto do produto:</strong></label>
+            <input type="file" id="foto" name="attachment" accept="image/*" required>
 
             <button type="submit" class="btn">Enviar Cadastro</button>
 
